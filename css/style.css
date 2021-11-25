@@ -1,3 +1,4 @@
+@import url('normalize.css');
 @import url('font-awesome.min.css');
 
 body, html {
@@ -136,6 +137,13 @@ footer {
   animation-delay: 3s;
 }
 
+#header nav li:nth-child(5) div.iconWrap {
+  -moz-animation-delay: 3.5s;
+  -webkit-animation-delay: 3.5s;
+  -ms-animation-delay: 3.5s;
+  -o-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
 
 #header nav .icon > .label {
   display: none;
@@ -202,6 +210,19 @@ footer {
 #header nav ul li {
   display: inline-block;
   padding: 6vh 2vw;
+}
+
+#map {
+  margin: 0 auto;
+  margin-bottom: 2vw;
+  width: 60%;
+  height: 40vh;
+  background-color: grey;
+
+}
+
+.popup {
+  font-size: 3vh;
 }
 
 #footer {

@@ -1,11 +1,39 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<title>Germis BV</title>
 
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+		<script>
+			function initMap() {
+				var location = {lat: 50.788210, lng: 5.596650};
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 15,
+					center: location,
+					mapTypeControl: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					styles: [{
+						featureType: "poi",
+        				elementType: "labels",
+						stylers: [
+						{
+							visibility: "off"
+						}]
+					}]
+				});
+				var infoWindow = new google.maps.InfoWindow({
+                	content: "<span class='popup'><b>Germis BV</b><br/>Verbindingsweg 4<br/>3770 Riemst</span>"
+              	});
+
+				var marker = new google.maps.Marker({position: location, map: map});
+				marker.addListener('click', function() { infoWindow.open(map, marker)});
+				infoWindow.open(map, marker);
+			}
+ 		</script>
 	</head>
 
 	<body>
@@ -46,18 +74,27 @@
 											<span class="label">Email</span>
 										</a>
 									</div>
-								</li>						
+								</li>
+								<li>
+									<div class="iconWrap">
+										<a href="https://wa.me/32479707308" class="icon fa fa-whatsapp" title="Message Me">
+											<span class="label">WhatsApp</span>
+										</a>
+									</div>
+								</li>
 								<li>
 									<div class="iconWrap">
 										<a href="tel:+32479707308" class="icon fa fa-phone" title="Call Me">
 											<span class="label">Phone</span>
 										</a>
 									</div>
-								</li>		
+								</li>
 							</ul>
 						</nav>
 					</header>
 				</div>
+
+				<div id="map"></div>
 			</div>
 
 			<div id="footer">
@@ -66,7 +103,9 @@
 						GERMIS BV - BE0775.503.221
 					</div>
 				</footer>
-			</div>
+			</div>			
 		</div>
+
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMkoHeftYEkpBcxjfNvvASSqOurJKJUvc&callback=initMap"></script>
 	</body>
 </html>
