@@ -136,6 +136,13 @@ footer {
   animation-delay: 3s;
 }
 
+#header nav li:nth-child(5) div.iconWrap {
+  -moz-animation-delay: 3.5s;
+  -webkit-animation-delay: 3.5s;
+  -ms-animation-delay: 3.5s;
+  -o-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
 
 #header nav .icon > .label {
   display: none;
