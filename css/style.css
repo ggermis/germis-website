@@ -43,7 +43,7 @@ body, html {
   background-color: black;
   font-size: calc(12px + 1vw);
   line-height: 1.7em;
-  animation: move-in .7s linear .5s 1 normal forwards;
+  animation: fold-out .7s linear .5s 1 normal forwards;
 }
 
 #subtitle div:nth-child(1) {
@@ -105,7 +105,7 @@ body, html {
 
 #icons nav .iconWrap {
   opacity: 0;
-  animation: nav-icons 1s ease-in-out forwards;  
+  animation: spin-up 1s ease-in-out forwards;  
 }
 
 #icons nav li:nth-child(1) div.iconWrap {
@@ -232,13 +232,13 @@ body, html {
   to { opacity: 1; }
 }
 
-@keyframes nav-icons {
+@keyframes spin-up {
   0% {
-    -moz-transform: translate3d(0, 5em, 0) rotateY(360deg);
-    -webkit-transform: translate3d(0, 5em, 0) rotateY(360deg);
-    -ms-transform: translate3d(0, 5em, 0) rotateY(360deg);
-    -o-transform: translate3d(0, 5em, 0) rotateY(360deg);
-    transform: translate3d(0, 5em, 0) rotateY(360deg);
+    -moz-transform: translate3d(0, 7vh, 0) rotateY(360deg);
+    -webkit-transform: translate3d(0, 7vh, 0) rotateY(360deg);
+    -ms-transform: translate3d(0, 7vh, 0) rotateY(360deg);
+    -o-transform: translate3d(0, 7vh, 0) rotateY(360deg);
+    transform: translate3d(0, 7vh, 0) rotateY(360deg);
     opacity: 0;
   }
 
@@ -252,7 +252,7 @@ body, html {
   }
 }
 
-@keyframes move-in {
+@keyframes fold-out {
   0% {
     opacity: 0;
     transform:  rotateX(90deg);
