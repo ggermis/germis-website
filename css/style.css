@@ -1,11 +1,221 @@
 @import url('font-awesome.min.css');
+@import url('normalize.css');
 
 body, html {
-  margin: 0;
+  height: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'Montserrat';
+  letter-spacing: 4px;
 }
 
-footer {
+#page {
+  margin: 0px auto;
+  height: 100%;
+  width: min(1600px, 100%);
+  min-height: 100%;
+}
+
+#wrapper {
+  min-height: calc(100% - 2rem);
+  display: table;
+  width: 100%;
+}
+
+#content {
+  padding: 0 2vw;
   display: table-cell;
+  vertical-align: middle;
+  animation: fade-in 2s linear;
+}
+
+#subtitle {
+  margin-top: 3vh;
+  padding: 0;
+}
+
+#subtitle div {
+  opacity: 0;
+  margin: .5vw auto;
+  width: 75%;
+  text-align: center;
+  color: white;
+  background-color: black;
+  font-size: calc(12px + 1vw);
+  line-height: 1.7em;
+  animation: move-in .7s linear .5s 1 normal forwards;
+}
+
+#subtitle div:nth-child(1) {
+  -moz-animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+  -ms-animation-delay: .2s;
+  -o-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+#subtitle div:nth-child(2) {
+  -moz-animation-delay: .3s;
+  -webkit-animation-delay: .3s;
+  -ms-animation-delay: .3s;
+  -o-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+#subtitle div:nth-child(3) {
+  -moz-animation-delay: .4s;
+  -webkit-animation-delay: .4s;
+  -ms-animation-delay: .4s;
+  -o-animation-delay: .4s;
+  animation-delay: .4s;
+}
+
+#subtitle div:nth-child(4) {
+  -moz-animation-delay: .5s;
+  -webkit-animation-delay: .5s;
+  -ms-animation-delay: .5s;
+  -o-animation-delay: .5s;
+  animation-delay: .5s;
+}
+
+#photo {
+  opacity: 0;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5vh;
+  width: 100%;
+  animation: fade-in 2s linear .8s 1 normal forwards;
+}
+
+#photo div {
+  font-size: max(16px, 1.4vh);
+  font-weight: bold;
+  line-height: 1.7em;
+}
+
+#photo img {
+  border-radius: 20%;
+  height: max(20vw, 20vh);
+}
+
+#icons {
+  display: block;
+  vertical-align: middle;
+}
+
+#icons nav .iconWrap {
+  opacity: 0;
+  animation: nav-icons 1s ease-in-out forwards;  
+}
+
+#icons nav li:nth-child(1) div.iconWrap {
+  -moz-animation-delay: .8s;
+  -webkit-animation-delay: .8s;
+  -ms-animation-delay: .8s;
+  -o-animation-delay: .8s;
+  animation-delay: .8s;
+}
+
+#icons nav li:nth-child(2) div.iconWrap {
+  -moz-animation-delay: .9s;
+  -webkit-animation-delay: .9s;
+  -ms-animation-delay: .9s;
+  -o-animation-delay: .9s;
+  animation-delay: .9s;
+}
+
+#icons nav li:nth-child(3) div.iconWrap {
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+#icons nav li:nth-child(4) div.iconWrap {
+  -moz-animation-delay: 1.1s;
+  -webkit-animation-delay: 1.1s;
+  -ms-animation-delay: 1.1s;
+  -o-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+}
+
+#icons nav li:nth-child(5) div.iconWrap {
+  -moz-animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+  -ms-animation-delay: 1.2s;
+  -o-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+#icons nav .icon > .label {
+  display: none;
+}
+
+#icons nav .icon {
+  font-size: min(48px, 5vw);
+  border: 1px darkgray solid;
+  padding: min(32px, 3vw);
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .3s;
+  -moz-transition: -moz-transform .3s;
+  -ms-transition: -moz-transform .3s;
+  -o-transition: -o-transform .3s;
+  transition: transform .3s;
+}
+
+#icons nav .icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none !important;
+}
+
+#icons nav .icon:hover {
+  -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
+  text-decoration: none;
+}
+
+#icons nav a {
+  color: black;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#icons nav a:link {
+  color: black;
+}
+
+#icons nav a:visited {
+  color: black;
+}
+
+#icons nav a:focus {
+  outline:none;
+}
+
+#icons nav ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  padding-inline-start: 0px;
+  list-style-type: none;
+}
+
+#icons nav ul li {
+  display: inline-block;
+  padding: 6vh 2vw;
+}
+
+#footer footer {
   vertical-align: middle;
   text-align: center;
   text-anchor: middle;
@@ -17,208 +227,7 @@ footer {
   letter-spacing: 3px;
 }
 
-#page {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-
-#content {
-  display: table-cell;
-  vertical-align: middle;
-  height: 100%;
-  animation: fadeIn 3s linear;
-}
-
-#logo {
-  display: block;
-  vertical-align: middle;
-}
-
-#subtitle {
-  margin-top: 3vh;
-  padding:  0;
-}
-
-#subtitle div {
-  margin: 0px auto;
-  opacity: 0;
-  width: 75%;
-  margin-top: .5vw;
-  text-align: center;
-  text-anchor: middle;
-  color: white;
-  background-color: black;
-  font-size: calc(12px + 1vw);
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.7em;
-  font-family: 'Montserrat';
-  letter-spacing: 4px;
-  animation-name: move-in;
-  animation-duration: 0.7s;
-  animation-delay: 0.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-#subtitle div:nth-child(1) {
-  -moz-animation-delay: .3s;
-  -webkit-animation-delay: .3s;
-  -ms-animation-delay: .3s;
-  -o-animation-delay: .3s;
-  animation-delay: .3s;
-}
-
-#subtitle div:nth-child(2) {
-  -moz-animation-delay: .6s;
-  -webkit-animation-delay: .6s;
-  -ms-animation-delay: .6s;
-  -o-animation-delay: .6s;
-  animation-delay: .6s;
-}
-
-#subtitle div:nth-child(3) {
-  -moz-animation-delay: .9s;
-  -webkit-animation-delay: .9s;
-  -ms-animation-delay: .9s;
-  -o-animation-delay: .9s;
-  animation-delay: .9s;
-}
-
-#subtitle div:nth-child(4) {
-  -moz-animation-delay: 1.2s;
-  -webkit-animation-delay: 1.2s;
-  -ms-animation-delay: 1.2s;
-  -o-animation-delay: 1.2s;
-  animation-delay: 1.2s;
-}
-
-#header {
-  display: block;
-  vertical-align: middle;
-}
-
-#header nav .iconWrap {
-  opacity: 0;
-  animation: nav-icons 1s ease-in-out forwards;  
-}
-
-#header nav li:nth-child(1) div.iconWrap {
-  -moz-animation-delay: 1.5s;
-  -webkit-animation-delay: 1.5s;
-  -ms-animation-delay: 1.5s;
-  -o-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-}
-
-#header nav li:nth-child(2) div.iconWrap {
-  -moz-animation-delay: 2s;
-  -webkit-animation-delay: 2s;
-  -ms-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
-#header nav li:nth-child(3)  div.iconWrap {
-  -moz-animation-delay: 2.5s;
-  -webkit-animation-delay: 2.5s;
-  -ms-animation-delay: 2.5s;
-  -o-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-}
-
-#header nav li:nth-child(4) div.iconWrap {
-  -moz-animation-delay: 3s;
-  -webkit-animation-delay: 3s;
-  -ms-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  animation-delay: 3s;
-}
-
-#header nav li:nth-child(5) div.iconWrap {
-  -moz-animation-delay: 3.5s;
-  -webkit-animation-delay: 3.5s;
-  -ms-animation-delay: 3.5s;
-  -o-animation-delay: 3.5s;
-  animation-delay: 3.5s;
-}
-
-#header nav .icon > .label {
-  display: none;
-}
-
-#header nav .icon {
-  font-size: 5vw;
-  border: 1px darkgray solid;
-  padding: 3vw;
-  border-radius: 50%;
-  -webkit-transition: -webkit-transform .3s;
-  -moz-transition: -moz-transform .3s;
-  -ms-transition: -moz-transform .3s;
-  -o-transition: -o-transform .3s;
-  transition: transform .3s;
-}
-
-#header nav .icon:before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: none !important;
-}
-
-#header nav .icon:hover {
-  -moz-transform: scale(1.3);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  -o-transform: scale(1.3);
-  transform: scale(1.3);
-  text-decoration: none;
-}
-
-#header nav a {
-  color: black;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-#header nav a:link {
-  color: black;
-}
-
-#header nav a:visited {
-  color: black;
-}
-
-#header nav a:focus {
-  outline:none;
-}
-
-#header nav ul {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  padding-inline-start: 0px;
-  list-style-type: none;
-}
-
-#header nav ul li {
-  display: inline-block;
-  padding: 6vh 2vw;
-}
-
-#footer {
-  display: table-row;
-  height: 3em;
-}
-
-
-
-@keyframes fadeIn {
+@keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
 }
